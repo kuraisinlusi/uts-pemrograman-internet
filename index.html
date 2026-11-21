@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Lusi's Food</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="lusi_header">
+      <div class="lusi_wrap">
+        <a class="lusi_logo" href="#lusi_beranda">
+          <img
+            src="img/lusifood.png"
+            alt="Lusi's FOOD"
+            style="height: 40px; width: auto; vertical-align: middle"
+          />
+        </a>
+        <nav class="lusi_menu" id="lusi_menu" aria-label="Menu utama">
+          <a href="#lusi_beranda">Beranda</a>
+          <a href="#lusi_produk">Produk</a>
+          <a href="#lusi_promo">Promo</a>
+          <a href="#lusi_tentang">Tentang</a>
+          <a href="#lusi_testimoni">Testimoni</a>
+          <a href="#lusi_kontak">Kontak</a>
+        </nav>
+        <a class="lusi_btn lusi_cartbtn" href="#lusi_keranjang"
+          >Keranjang<span class="lusi_badge" id="lusi_count">0</span></a
+        >
+        <button
+          class="lusi_burger"
+          id="lusi_burger"
+          aria-label="Buka menu"
+          aria-expanded="false"
+        ></button>
+      </div>
+    </header>
+
+    <main>
+      <section class="lusi_hero" id="lusi_beranda">
+        <div class="lusi_wrap">
+          <div class="lusi_slider" id="lusi_slider">
+            <div class="lusi_track" id="lusi_track">
+              <div class="lusi_slide lusi_s1">
+                <div>
+                  <h1>Menu makan hangat, sambalnya nampol</h1>
+                  <p>
+                    Dari ayam, lele, hingga berbagai pilihan lauk favorit,
+                    semuanya disajikan segar dengan sambal ulek khas Lusi's Food
+                  </p>
+                  <a class="lusi_btn" href="#lusi_produk">Pesan sekarang</a>
+                </div>
+                <div class="lusi_big">
+                  <img
+                    src="img/bg1.png"
+                    alt="menu makanan"
+                    class="lusi_hero_img"
+                  />
+                </div>
+              </div>
+              <div class="lusi_slide lusi_s2">
+                <div>
+                  <h1>Pedasnya pas, minumnya dingin</h1>
+                  <p>Aneka rasa minuman untuk teman makan</p>
+                  <a class="lusi_btn" href="#lusi_promo">Lihat promo</a>
+                </div>
+                <div class="lusi_big">
+                  <img
+                    src="img/bg2.png"
+                    alt="menu minuman"
+                    class="lusi_hero_img"
+                  />
+                </div>
+              </div>
+              <div class="lusi_slide lusi_s3">
+                <div>
+                  <h1>Makan ramai-ramai lebih hemat</h1>
+                  <p>
+                    Paket ayam penyet plus es teh, cocok untuk kantor, kos, atau
+                    arisan
+                  </p>
+                  <a class="lusi_btn" href="#lusi_kontak">Pesan paket</a>
+                </div>
+                <div class="lusi_big">
+                  <img
+                    src="img/bg3.png"
+                    alt="menu paket"
+                    class="lusi_hero_img"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="lusi_nav">
+              <button id="lusi_prev" aria-label="Slide sebelumnya">‹</button>
+              <button id="lusi_next" aria-label="Slide berikutnya">›</button>
+              <span id="lusi_dots"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lusi_section" id="lusi_produk">
+        <div class="lusi_wrap">
+          <h2>Produk kami</h2>
+          <p class="lusi_sub">
+            Cari menu dengan kata kunci atau pilih kategori.
+          </p>
+          <div class="lusi_tools">
+            <input
+              class="lusi_search"
+              id="lusi_search"
+              type="search"
+              placeholder="Cari produk, misalnya ayam"
+              aria-label="Cari produk"
+            />
+            <span id="lusi_chips"></span>
+          </div>
+          <div class="lusi_grid" id="lusi_grid"></div>
+        </div>
+      </section>
+
+      <section class="lusi_section" id="lusi_promo">
+        <div class="lusi_wrap">
+          <div class="lusi_promo">
+            <div>
+              <h2>Gratis ongkir Kota Tasikmalaya</h2>
+              <p style="margin: 6px 0 0">
+                Untuk belanja di atas Rp100.000 Berlaku sampai akhir bulan.
+              </p>
+            </div>
+            <a class="lusi_btn" href="#lusi_produk">Mulai belanja</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="lusi_section" id="lusi_tentang">
+        <div class="lusi_wrap lusi_about">
+          <div>
+            <h2>Dari dapur rumahan, untuk Anda</h2>
+            <p class="lusi_sub">
+              Lusi’s Food berawal dari dapur rumah di tahun 2019, berbekal resep
+              turun-temurun dan kecintaan kami pada kuliner pedas. Kami percaya
+              bahwa makanan yang enak tidak hanya mengenyangkan, tapi juga
+              membawa kehangatan. Setiap porsi ayam dan ikan dibuat dadakan saat
+              pesanan masuk, dipadukan dengan sambal ulek segar yang diracik
+              setiap hari tanpa bahan pengawet.
+            </p>
+            <a class="lusi_btn lusi_btn_line" href="#lusi_kontak"
+              >Hubungi kami</a
+            >
+          </div>
+          <div class="lusi_stats">
+            <div class="lusi_stat"><b>12.000+</b>pesanan terkirim</div>
+            <div class="lusi_stat"><b>5 level</b>kepedasan sambal</div>
+            <div class="lusi_stat"><b>4,8/5</b>rating pelanggan</div>
+            <div class="lusi_stat"><b>2 jam</b>pengiriman tercepat</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lusi_section" id="lusi_testimoni">
+        <div class="lusi_wrap">
+          <h2>Ulasan</h2>
+          <p class="lusi_sub">Ulasan dari pembeli yang sudah mencoba.</p>
+          <div class="lusi_quotes" id="lusi_quotes"></div>
+          <div class="lusi_contact_box lusi_review_box">
+            <h2>Tulis ulasan</h2>
+            <form class="lusi_form" id="lusi_form_ulasan" novalidate>
+              <div>
+                <label for="lusi_u_nama">Nama</label>
+                <input id="lusi_u_nama" autocomplete="name" />
+                <span class="lusi_err" id="lusi_err_u_nama"></span>
+              </div>
+              <div>
+                <label for="lusi_u_bintang">Penilaian</label>
+                <select id="lusi_u_bintang">
+                  <option value="5">5 bintang</option>
+                  <option value="4">4 bintang</option>
+                  <option value="3">3 bintang</option>
+                  <option value="2">2 bintang</option>
+                  <option value="1">1 bintang</option>
+                </select>
+              </div>
+              <div>
+                <label for="lusi_u_teks">Ulasan</label>
+                <textarea id="lusi_u_teks" rows="4"></textarea>
+                <span class="lusi_err" id="lusi_err_u_teks"></span>
+              </div>
+              <button class="lusi_btn" type="submit">Kirim ulasan</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="lusi_section" id="lusi_keranjang">
+        <div class="lusi_wrap">
+          <h2>Keranjang belanja</h2>
+          <p class="lusi_sub">Atur jumlah pesanan sebelum checkout.</p>
+          <div class="lusi_cartlist" id="lusi_cartlist"></div>
+          <div class="lusi_total">
+            <span>Total: <span id="lusi_total">Rp0</span></span
+            ><button class="lusi_btn" id="lusi_checkout">Checkout</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="lusi_section" id="lusi_kontak">
+        <div class="lusi_wrap">
+          <div class="lusi_contact_box">
+            <h2>Kontak</h2>
+            <p class="lusi_sub">
+              Kirim pesan untuk pertanyaan menu, level pedas, atau pesanan
+              besar.
+            </p>
+            <form class="lusi_form" id="lusi_form" novalidate>
+              <div>
+                <label for="lusi_nama">Nama</label>
+                <input id="lusi_nama" autocomplete="name" />
+                <span class="lusi_err" id="lusi_err_nama"></span>
+              </div>
+              <div>
+                <label for="lusi_email">Email</label>
+                <input id="lusi_email" type="email" autocomplete="email" />
+                <span class="lusi_err" id="lusi_err_email"></span>
+              </div>
+              <div>
+                <label for="lusi_pesan">Pesan</label>
+                <textarea id="lusi_pesan" rows="5"></textarea>
+                <span class="lusi_err" id="lusi_err_pesan"></span>
+              </div>
+              <button class="lusi_btn" type="submit">Kirim pesan</button>
+              <div class="lusi_ok" id="lusi_ok" hidden></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="lusi_footer">
+      <div class="lusi_wrap">©️ 2026 Lusi Kuraisin (2403010006)</div>
+    </footer>
+
+    <div
+      class="lusi_modal"
+      id="lusi_modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="lusi_mtitle"
+    >
+      <div class="lusi_box">
+        <button class="lusi_close" id="lusi_mclose" aria-label="Tutup">
+          ×
+        </button>
+        <div class="lusi_big" id="lusi_mico"></div>
+        <h3 id="lusi_mtitle" style="font-size: 26px; margin: 8px 0"></h3>
+        <p id="lusi_mdesc" style="color: var(--mut)"></p>
+        <p class="lusi_price" id="lusi_mprice" style="font-size: 20px"></p>
+        <button class="lusi_btn" id="lusi_madd">Tambah ke keranjang</button>
+      </div>
+    </div>
+    <div class="lusi_toast" id="lusi_toast" role="status"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

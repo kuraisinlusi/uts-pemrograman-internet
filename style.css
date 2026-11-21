@@ -1,0 +1,675 @@
+:root {
+  --bg: #fff;
+  --bg2: #f4f6f2;
+  --ink: #1b1f1d;
+  --mut: #5d675f;
+  --line: #dfe4dc;
+  --green: #2f6b4f;
+  --red: #d9482b;
+  --on: #fff;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141816;
+    --bg2: #1d2420;
+    --ink: #eef2ec;
+    --mut: #a3aea5;
+    --line: #2e3832;
+    --green: #6fcf9f;
+    --red: #ff7a5c;
+    --on: #0f1a14;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font:
+    400 16px/1.6 "DM Sans",
+    system-ui,
+    sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Bricolage Grotesque", "DM Sans", system-ui, sans-serif;
+  line-height: 1.1;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--red);
+  outline-offset: 2px;
+}
+
+.lusi_wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.lusi_btn {
+  display: inline-block;
+  background: var(--green);
+  color: var(--on);
+  border: 0;
+  border-radius: 999px;
+  padding: 11px 22px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.lusi_btn:hover {
+  filter: brightness(1.1);
+}
+
+.lusi_btn_line {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--line);
+}
+
+.lusi_section {
+  padding: 72px 0;
+  border-top: 1px solid var(--line);
+}
+
+.lusi_section h2 {
+  font-size: clamp(28px, 5vw, 42px);
+  margin-bottom: 8px;
+}
+
+.lusi_sub {
+  color: var(--mut);
+  margin: 0 0 32px;
+  max-width: 56ch;
+}
+
+.lusi_header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+.lusi_header .lusi_wrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 62px;
+}
+
+.lusi_logo {
+  text-decoration: none;
+  margin-right: auto;
+}
+
+.lusi_menu {
+  display: flex;
+  gap: 22px;
+}
+
+.lusi_menu a {
+  text-decoration: none;
+  color: var(--mut);
+  font-weight: 500;
+}
+
+.lusi_menu a:hover {
+  color: var(--ink);
+}
+
+.lusi_cartbtn {
+  position: relative;
+}
+
+.lusi_badge {
+  background: var(--red);
+  color: #fff;
+  border-radius: 999px;
+  font-size: 12px;
+  padding: 1px 7px;
+  margin-left: 6px;
+}
+
+.lusi_burger {
+  display: none;
+  background: none;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.lusi_hero {
+  padding: 36px 0 56px;
+}
+
+.lusi_slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.lusi_track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.lusi_slide {
+  min-width: 100%;
+  padding: 56px 48px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 24px;
+  align-items: center;
+  min-height: 340px;
+}
+
+.lusi_slide h1 {
+  font-size: clamp(34px, 6vw, 60px);
+  margin-bottom: 14px;
+}
+
+.lusi_slide p {
+  color: inherit;
+  opacity: 0.85;
+  max-width: 44ch;
+  margin: 0 0 22px;
+}
+
+.lusi_slide .lusi_big {
+  text-align: center;
+}
+
+.lusi_hero_img {
+  width: 100%;
+  max-width: 280px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.lusi_s1 {
+  background: #dcebd3;
+  color: #16301f;
+}
+.lusi_s2 {
+  background: #f6dcc9;
+  color: #4a1f10;
+}
+.lusi_s3 {
+  background: #e3dff3;
+  color: #251b4a;
+}
+
+.lusi_nav {
+  position: absolute;
+  bottom: 16px;
+  left: 48px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.lusi_nav button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(0, 0, 0, 0.14);
+  color: inherit;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.lusi_dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.25);
+  display: inline-block;
+}
+
+.lusi_dot.lusi_on {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.lusi_tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.lusi_search {
+  flex: 1 1 220px;
+  border: 1.5px solid var(--line);
+  background: var(--bg);
+  border-radius: 999px;
+  padding: 10px 18px;
+}
+
+.lusi_chip {
+  border: 1.5px solid var(--line);
+  background: var(--bg);
+  border-radius: 999px;
+  padding: 9px 16px;
+  cursor: pointer;
+}
+
+.lusi_chip.lusi_on {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+
+.lusi_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 18px;
+}
+
+.lusi_card {
+  background: var(--bg2);
+  border-radius: 18px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.lusi_pic {
+  background: var(--bg);
+  border-radius: 12px;
+  text-align: center;
+  padding: 0;
+  overflow: hidden;
+  height: 140px;
+  cursor: pointer;
+  border: 0;
+  width: 100%;
+}
+
+.lusi_card h3 {
+  font-size: 18px;
+  margin-top: 6px;
+}
+
+.lusi_cat {
+  color: var(--mut);
+  font-size: 14px;
+}
+
+.lusi_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.lusi_price {
+  font-weight: 700;
+}
+
+.lusi_empty {
+  color: var(--mut);
+  grid-column: 1 / -1;
+}
+
+.lusi_promo {
+  background: var(--green);
+  color: var(--on);
+  border-radius: 24px;
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lusi_promo h2 {
+  margin: 0;
+}
+
+.lusi_promo .lusi_btn {
+  background: var(--on);
+  color: var(--green);
+}
+
+.lusi_about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.lusi_stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.lusi_stat {
+  background: var(--bg2);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.lusi_stat b {
+  font:
+    800 32px "Bricolage Grotesque",
+    sans-serif;
+  display: block;
+}
+
+.lusi_quotes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.lusi_quote {
+  border: 1.5px solid var(--line);
+  border-radius: 18px;
+  padding: 22px;
+}
+
+.lusi_quote p {
+  margin: 0 0 12px;
+}
+
+.lusi_quote span {
+  color: var(--mut);
+  font-size: 14px;
+}
+
+.lusi_cartlist {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.lusi_item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--bg2);
+  border-radius: 14px;
+  padding: 12px 16px;
+}
+
+.lusi_item .lusi_ico {
+  width: 45px;
+  height: 45px;
+  overflow: hidden;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lusi_item .lusi_info {
+  flex: 1;
+}
+
+.lusi_qty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lusi_qty button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1.5px solid var(--line);
+  background: var(--bg);
+  cursor: pointer;
+}
+
+.lusi_total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.lusi_contact_box {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 36px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.lusi_contact_box h2,
+.lusi_contact_box .lusi_sub {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lusi_form {
+  display: grid;
+  gap: 14px;
+  width: 100%;
+}
+
+.lusi_form label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.lusi_form input,
+.lusi_form select,
+.lusi_form textarea {
+  width: 100%;
+  border: 1.5px solid var(--line);
+  background: var(--bg);
+  border-radius: 12px;
+  padding: 11px 14px;
+}
+
+.lusi_form button {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.lusi_err {
+  color: var(--red);
+  font-size: 14px;
+  min-height: 18px;
+  display: block;
+}
+
+.lusi_ok {
+  background: var(--bg2);
+  border-left: 4px solid var(--green);
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+.lusi_modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 20px;
+}
+
+.lusi_modal.lusi_open {
+  display: flex;
+}
+
+.lusi_box {
+  background: var(--bg);
+  border-radius: 22px;
+  max-width: 440px;
+  width: 100%;
+  padding: 28px;
+  position: relative;
+  text-align: center;
+}
+
+.lusi_box .lusi_big {
+  font-size: 96px;
+  line-height: 1.1;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.lusi_close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: none;
+  border: 0;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.lusi_toast {
+  position: fixed;
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--ink);
+  color: var(--bg);
+  padding: 10px 20px;
+  border-radius: 999px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 60;
+}
+
+.lusi_toast.lusi_show {
+  opacity: 1;
+  transform: translateX(-50%);
+}
+
+.lusi_footer {
+  border-top: 1px solid var(--line);
+  padding: 28px 0;
+  color: var(--mut);
+  text-align: center;
+  font-size: 14px;
+}
+
+@media (max-width: 760px) {
+  .lusi_burger {
+    display: block;
+  }
+
+  .lusi_menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    flex-direction: column;
+    gap: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .lusi_menu.lusi_open {
+    display: flex;
+  }
+
+  .lusi_menu a {
+    padding: 14px 20px;
+    border-top: 1px solid var(--line);
+  }
+
+  .lusi_slide {
+    grid-template-columns: 1fr;
+    padding: 32px 24px 72px;
+    text-align: left;
+  }
+
+  .lusi_slide .lusi_big {
+    display: none;
+  }
+
+  .lusi_nav {
+    left: 24px;
+  }
+
+  .lusi_about {
+    grid-template-columns: 1fr;
+  }
+
+  .lusi_section {
+    padding: 52px 0;
+  }
+
+  .lusi_promo {
+    padding: 28px;
+  }
+
+  .lusi_contact_box {
+    padding: 24px 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .lusi_track,
+  .lusi_toast {
+    transition: none;
+  }
+}
+
+.lusi_stars {
+  color: var(--green);
+  letter-spacing: 3px;
+  margin-bottom: 6px;
+}
+
+.lusi_review_box {
+  margin-top: 40px;
+}
